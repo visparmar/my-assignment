@@ -18,4 +18,9 @@ npm install '
 npm run dev
 
 
+## If you prefer running the project using Docker, use:
+
+docker-compose up 
+
+
 
