@@ -14,6 +14,14 @@ git clone https://github.com/visparmar/my-assignment.git:
 ```bash
 npm install '
 
+create a .env file with this key and value 
+# .env file
+MYSQL_ROOT_PASSWORD=
+MYSQL_DATABASE=
+DB_USER=
+DB_PASSWORD=
+DB_HOST=
+
 ## 3. Run the Development Server
 npm run dev
 
