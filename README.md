@@ -7,14 +7,14 @@ Follow these steps to get the project up and running locally:
 Start by cloning the repository to your local machine. Open your terminal and run the following command:
 
 ```bash
-git clone https://github.com/visparmar/my-assignment.git
+git clone https://github.com/visparmar/my-assignment.git:
 
-### 2. install Dependency
+## 2. install Dependency
 
 ```bash
 npm install '
 
-### 3. Run the Development Server
+## 3. Run the Development Server
 npm run dev
 
 
