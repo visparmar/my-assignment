@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mysql:
     image: mysql:latest
-    container_name: mysql-container
+    container_name: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -12,10 +12,11 @@ services:
       - "3307:3307"
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./database:/docker-entrypoint-initdb.d
 
   nextjs:
     build: .
-    container_name: nextjs-container
+    container_name: nextjs
     restart: always
     depends_on:
       - mysql
@@ -26,10 +27,10 @@ services:
       DB_NAME: ${MYSQL_DATABASE}
     ports:
       - "3000:3000"
-    volumes:
-      - .:/app
-    working_dir: /app
-    command: ["npm", "run", "dev"]
+    # volumes:
+    #   - .:/app
+    # working_dir: /app
+    command: ["dev"]
 
 volumes:
   mysql_data:
